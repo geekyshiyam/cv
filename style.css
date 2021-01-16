@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Muli' , sans-serif;
+    display: flex; /* Prints every elements in a straight line */
+    margin: 0; /* Removes all margin */
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;/* Centers element in vertical */
+    height: 100vh; /* Makes every element center*/
+   
+}
+.heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    top: 10px;
+    color: aliceblue;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+}
+.container { /* Making the container to be flex*/
+    padding-top: 80px;
+    display: flex;/* Prints every elements in a straight line */
+    width: 90vw; /*Sets the width to 90% of the VIEWPORT*/
+}
+.panel{ /* Changing some attributes for panels*/
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    height: 60vh;
+    border-radius: 50px;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    top: 70px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+.panel h3{ /* Changing some attributes for heading */
+    font-size: 24px;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 450px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    top: 10px;
+    height: 80vh;
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+/* Learn more about media query to understand below lines */
